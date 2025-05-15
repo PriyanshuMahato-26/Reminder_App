@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remind Me Later</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="app-container">
+            <h1><i class="fas fa-bell"></i> Remind Me Later</h1>
+            
+            <div id="notification" class="notification hidden"></div>
+            
+            <form id="reminderForm">
+                <div class="form-group">
+                    <label for="datePicker">Date:</label>
+                    <input type="text" id="datePicker" placeholder="Select a date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="timePicker">Time:</label>
+                    <input type="text" id="timePicker" placeholder="Select a time" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Reminder Message:</label>
+                    <textarea id="message" rows="4" placeholder="Enter your reminder message" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Reminder Type:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="sms" name="reminderType" value="SMS" checked>
+                        <label for="sms">SMS</label>
+                        
+                        <input type="radio" id="email" name="reminderType" value="Email">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                
+                <div class="form-group" id="contactInfoContainer">
+                    <label for="contactInfo">Phone Number:</label>
+                    <input type="text" id="contactInfo" placeholder="Enter your phone number" required>
+                </div>
+                
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-save"></i> Set Reminder
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
